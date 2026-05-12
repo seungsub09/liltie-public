@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liltie Privacy Policy</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 720px;
+            margin: 40px auto;
+            padding: 0 24px 60px;
+            line-height: 1.7;
+            color: #1d1d1f;
+            background: #ffffff;
+        }
+        @media (prefers-color-scheme: dark) {
+            body { color: #f5f5f7; background: #1c1c1e; }
+            h1, h2 { color: #ffffff; }
+            p, li { color: #c7c7cc; }
+            .meta { color: #8e8e93; }
+            hr { border-color: #3a3a3c; }
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 32px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #e5e5e7;
+            padding-bottom: 12px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 8px;
+        }
+        p {
+            margin: 8px 0;
+            color: #424245;
+        }
+        ul {
+            color: #424245;
+            padding-left: 24px;
+        }
+        li { margin: 4px 0; }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover { text-decoration: underline; }
+        code {
+            background: rgba(0,0,0,0.05);
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        @media (prefers-color-scheme: dark) {
+            code { background: rgba(255,255,255,0.08); }
+        }
+        .meta {
+            color: #86868b;
+            font-size: 13px;
+            margin-top: 48px;
+            padding-top: 16px;
+            border-top: 1px solid #e5e5e7;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #e5e5e7;
+            margin: 56px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Liltie 개인정보 처리방침</h1>
+
+    <p>Liltie는 어떤 사용자 데이터도 수집·전송·공유하지 않습니다.</p>
+
+    <h2>저장되는 정보</h2>
+    <p>앱이 저장하는 모든 정보는 사용자의 기기에만 보관됩니다. iCloud 동기화를 사용 중인 경우, Apple의 CloudKit 개인 데이터베이스(본인 iCloud 계정 내부)로만 동기화됩니다.</p>
+    <ul>
+        <li>사용자가 기록한 음악 정보 — 트랙명·아티스트·앨범·커버 URL·메시지·무드 단계·날짜 → SwiftData (CloudKit 개인 DB와 자동 동기화 가능)</li>
+        <li>앱 설정 — 테마, 돌아보기 애니메이션 등 → UserDefaults</li>
+    </ul>
+
+    <h2>Apple Music (선택)</h2>
+    <p>Apple Music 연동은 선택 사항입니다. 사용자가 직접 연결을 허용한 경우에만 Apple Music 카탈로그 검색과 최근 들은 곡 정보를 조회합니다.</p>
+    <p>연동에 따른 처리는 Apple이 수행하며, Liltie는 결과 데이터(곡 메타데이터)만 화면에 표시합니다. Apple의 개인정보 처리방침을 따릅니다. 권한은 iOS 설정 또는 앱 내 설정에서 언제든 해제할 수 있습니다.</p>
+
+    <h2>음악 검색 (iTunes Search API)</h2>
+    <p>Apple Music 미연동 시, 음악 검색은 Apple의 공개 iTunes Search API를 통해 수행합니다. 요청에는 사용자가 입력한 검색어와 요청 국가(KR)만 포함되며, 사용자 식별 정보는 어떠한 형태로도 전송되지 않습니다.</p>
+    <p>검색 결과(트랙 정보, 미리듣기 URL, 앨범 커버 URL)는 사용자가 기록할 때만 기기에 저장됩니다.</p>
+
+    <h2>업데이트 확인</h2>
+    <p>Liltie는 새로운 버전 안내를 위해 Apple의 iTunes Lookup 공개 API(<code>itunes.apple.com/lookup</code>)에 앱 식별자로 조회 요청을 보냅니다. 이 요청에는 앱 식별자만 포함되며, 사용자 정보는 어떤 형태로도 포함되지 않습니다. 결과(게시된 최신 버전 번호)는 기기 내에 짧게 캐시되며 외부로 공유되지 않습니다.</p>
+
+    <h2>외부 음원 앱 연결</h2>
+    <p>사용자가 기록된 곡의 외부 링크 버튼을 누르면 Apple Music / Spotify / YouTube Music의 공개 검색 URL을 Universal Link로 호출합니다. 호출되는 URL에는 곡명과 아티스트명만 포함되며, 사용자 식별 정보는 포함되지 않습니다.</p>
+
+    <h2>Instagram 스토리 공유</h2>
+    <p>사용자가 공유 버튼을 누르면 카드 이미지를 시스템 Pasteboard에 복사하고 Instagram Stories의 공식 sharing API(<code>instagram-stories://share</code>)를 호출합니다. 이미지와 메타데이터는 시스템 Pasteboard를 통해 Instagram 앱으로만 전달되며, Liltie의 외부 서버로 전송되지 않습니다.</p>
+
+    <h2>사용 권한</h2>
+    <ul>
+        <li><strong>Apple Music (선택)</strong>: Apple Music 카탈로그 검색 및 사용자 라이브러리(최근 들은 곡) 접근</li>
+    </ul>
+    <p>권한은 iOS 설정 또는 앱 내 설정에서 언제든 켜고 끌 수 있습니다.</p>
+
+    <h2>데이터 삭제</h2>
+    <p>앱 내 "설정 > 모든 기록 삭제"에서 모든 기록을 일괄 삭제할 수 있습니다. 개별 기록은 해당 기록 화면의 메뉴(⋯)에서 삭제할 수 있습니다.</p>
+    <p>앱을 삭제하면 기기에 저장된 모든 정보가 함께 삭제됩니다. iCloud 동기화 데이터는 사용자의 iCloud 계정에 남을 수 있으며, iOS 설정 > Apple ID > iCloud > Liltie 에서 별도로 관리할 수 있습니다.</p>
+
+    <h2>문의</h2>
+    <p><a href="mailto:lss8162@gmail.com">lss8162@gmail.com</a></p>
+
+    <hr>
+
+    <h1>Liltie Privacy Policy</h1>
+
+    <p>Liltie does not collect, transmit, or share any user data.</p>
+
+    <h2>Information Stored</h2>
+    <p>All information stored by the app is kept only on your device. If iCloud sync is enabled, data is synced exclusively to Apple's CloudKit private database (within your own iCloud account).</p>
+    <ul>
+        <li>Music records you create — track name, artist, album, cover URL, message, mood level, date → SwiftData (auto-synced to your CloudKit private DB)</li>
+        <li>App settings — theme, lookback animation, etc. → UserDefaults</li>
+    </ul>
+
+    <h2>Apple Music (Optional)</h2>
+    <p>Apple Music integration is optional. The app accesses Apple Music catalog search and your recently played songs only when you explicitly authorize the connection.</p>
+    <p>The processing is performed by Apple; Liltie only displays the resulting metadata. Apple's Privacy Policy applies. You can revoke permission at any time in iOS Settings or within the app.</p>
+
+    <h2>Music Search (iTunes Search API)</h2>
+    <p>When Apple Music is not connected, music search uses Apple's public iTunes Search API. The request contains only your search term and country code (KR); no user-identifying information is transmitted.</p>
+    <p>Search results (track metadata, preview URL, artwork URL) are saved to your device only when you create a record.</p>
+
+    <h2>Update Check</h2>
+    <p>Liltie queries Apple's public iTunes Lookup API (<code>itunes.apple.com/lookup</code>) using the app's identifier to check for new versions. This request contains only the app's own identifier and never includes any user information. The result (the latest published version number) is briefly cached on the device and is not shared externally.</p>
+
+    <h2>External Music App Links</h2>
+    <p>When you tap the external link button on a record, Liltie opens the public search URL of Apple Music / Spotify / YouTube Music via Universal Link. Only the track name and artist name are included in the URL; no user-identifying information is included.</p>
+
+    <h2>Instagram Stories Sharing</h2>
+    <p>When you tap the share button, the card image is copied to the system Pasteboard and Instagram Stories' official sharing API (<code>instagram-stories://share</code>) is invoked. Images and metadata are passed only to the Instagram app via the system Pasteboard and never to Liltie's external servers.</p>
+
+    <h2>Permissions</h2>
+    <ul>
+        <li><strong>Apple Music (optional)</strong>: catalog search and access to your library (recently played)</li>
+    </ul>
+    <p>You can toggle this at any time in iOS Settings or in the app settings.</p>
+
+    <h2>Data Deletion</h2>
+    <p>You can delete all records at once from "Settings &gt; Delete All Records" within the app. Individual records can be deleted from the menu (⋯) on each record screen.</p>
+    <p>Uninstalling the app removes all locally stored information. iCloud-synced data may remain in your iCloud account; manage it separately under iOS Settings &gt; Apple ID &gt; iCloud &gt; Liltie.</p>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:lss8162@gmail.com">lss8162@gmail.com</a></p>
+
+    <p class="meta">Last updated: 2026-05-12</p>
+</body>
+</html>
